@@ -1,3 +1,5 @@
+# Для корректного запуска файла нужно воспользоваться терминалом с доступом администратора и написать в строку как в данном примере python "Диск:\Расположение файла\test2.py"
+
 import requests
 import os
 import winreg
@@ -89,9 +91,9 @@ def read_registry_file(filename):
     return values
 
 def main():
-    url = "https://drive.google.com/uc?export=download&id=18Yr6wfSAJZTqhttMFVDNx7pZkez2vJBq"  # Замените на вашу ссылку
+    url = "https://drive.google.com/uc?export=download&id=18Yr6wfSAJZTqhttMFVDNx7pZkez2vJBq"  
     save_dir = os.path.join(os.getenv("TEMP"), "GameFiles")  # Сохраняем в временной директории
-    game_id = "1568590"  # Замените на ID вашей игры
+    game_id = "1568590"  
 
     # Скачиваем файл
     downloaded_file = download_file(url, save_dir)
